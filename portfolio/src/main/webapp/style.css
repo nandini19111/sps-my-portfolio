@@ -7,3 +7,33 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+p {
+    color: lavenderblush;
+}
+
+h1 {
+    color: lavenderblush;
+    text-decoration: underline;
+}
+
+h2 {
+    color:lavenderblush;
+}
+
+Body {
+    Background-color: rosybrown;
+    }
+    
+img {
+    float: right;
+    width: 370px;
+    height: 600px;
+    }
+    
+ul.a {
+      list-style-type: circle;
+      color: floralwhite;
+      Font-size: 20px;
+    } 
+
