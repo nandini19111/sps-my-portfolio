@@ -13,7 +13,7 @@ public class PortfolioServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Get the value entered in the form.
-    String Answer = request.getParameter("text-input");
+    final String Answer = request.getParameter("text-input");
 
     // Print the value so you can see it in the server logs.
     System.out.println("Your email and purpose is: " + Answer);
