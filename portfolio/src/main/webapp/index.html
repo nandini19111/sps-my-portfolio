@@ -57,7 +57,7 @@
         <input type="submit" />
     </form>       
 
-    <form action="/translatingbox" method="POST">
+    <form action="/translatingbox" method="GET">
         <h2>Translation Box!</h2>
         <h3>Please type anything you'd like to see translated into my mother tongue, Hindi!</h3>
         <textarea class ="div1" name="text">Your Text</textarea>
@@ -65,9 +65,9 @@
         <button onclick="showTranslation();">
             Submit
         </button>
-        <p id="done-text"></p>
-        <p><a href="/translatingbox"></a></p>
     </form>
+
+    <h3 id="final-text"></h3>
     
 
     </div>

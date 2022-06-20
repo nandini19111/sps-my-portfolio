@@ -30,7 +30,7 @@ async function showTranslation() {
     const responseFromServer = await fetch('/translatingbox');
     const textFromResponse = await responseFromServer.text();
   
-    const finalText = document.getElementById('done-text');
+    const finalText = document.getElementById("final-text");
     finalText.innerText = textFromResponse;
   }
   

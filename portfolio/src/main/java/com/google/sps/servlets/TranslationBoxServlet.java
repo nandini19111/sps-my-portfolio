@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServlet;
 @WebServlet({ "/translatingbox" })
 public class TranslationBoxServlet extends HttpServlet{
 
-    public void doPost(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+    public void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         final String originalText = request.getParameter("text");
         final Translate translate = (Translate)TranslateOptions.getDefaultInstance().getService();
         final Translation translation = translate.translate(originalText, new Translate.TranslateOption[] { Translate.TranslateOption.targetLanguage("hi") });
@@ -36,7 +36,7 @@ public class TranslationBoxServlet extends HttpServlet{
             final Entity entity = (Entity)results.next();
         }
         
-        response.sendRedirect("https://nsharma-sps-summer22.appspot.com");
+
         response.setContentType("application/json;charset=utf-8");
         response.getWriter().println("The translation is " + translatedText);
     }
