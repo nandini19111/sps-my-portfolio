@@ -15,14 +15,22 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+//function addRandomGreeting() {
+  //const greetings =
+      //['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  //const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
+  //const greetingContainer = document.getElementById('greeting-container');
+  //greetingContainer.innerText = greeting;}
+
+async function showTranslation() {
+    const responseFromServer = await fetch('/translatingbox');
+    const textFromResponse = await responseFromServer.text();
+  
+    const finalText = document.getElementById('done-text');
+    finalText.innerText = textFromResponse;
+  }
+  
