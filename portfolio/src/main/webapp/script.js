@@ -26,11 +26,25 @@
   //const greetingContainer = document.getElementById('greeting-container');
   //greetingContainer.innerText = greeting;}
 
-async function showTranslation() {
-    const responseFromServer = await fetch('/translatingbox');
-    const textFromResponse = await responseFromServer.text();
+    function showTranslation() {
+        const text = document.getElementById('text').value;
+
+        const resultContainer = document.getElementById('final-text');
+        resultContainer.innerText = 'Loading...';
+
+        const params = new URLSearchParams();
+        params.append('text', text);
+
+        fetch('/translatingbox', {
+            method: 'POST',
+            body: params
+          }).then(response => response.text())
+          .then((translatedMessage) => {
+            resultContainer.innerText = translatedMessage;
+          });
+        }
+    
   
-    const finalText = document.getElementById("final-text");
-    finalText.innerText = textFromResponse;
-  }
+
+  
   

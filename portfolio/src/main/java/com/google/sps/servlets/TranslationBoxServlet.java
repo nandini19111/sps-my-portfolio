@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServlet;
 @WebServlet({ "/translatingbox" })
 public class TranslationBoxServlet extends HttpServlet{
 
-    public void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
+    public void doPost(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
         final String originalText = request.getParameter("text");
         final Translate translate = (Translate)TranslateOptions.getDefaultInstance().getService();
         final Translation translation = translate.translate(originalText, new Translate.TranslateOption[] { Translate.TranslateOption.targetLanguage("hi") });
@@ -35,10 +35,10 @@ public class TranslationBoxServlet extends HttpServlet{
         while (results.hasNext()) {
             final Entity entity = (Entity)results.next();
         }
-        
 
-        response.setContentType("application/json;charset=utf-8");
-        response.getWriter().println("The translation is " + translatedText);
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().println(translatedText);
     }
 }
 
