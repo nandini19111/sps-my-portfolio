@@ -1,9 +1,51 @@
 #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+  }
+  
+  #greeting-container {
+    margin-top: 20px;
+  }
+  
+  p {
+      color: lavenderblush;
+  }
+  
+  h1 {
+      color: lavenderblush;
+      text-decoration: underline;
+  }
+  
+  h2 {
+      color:lavenderblush;
+  }
+  
+  h3 {
+      color:lavenderblush;
+  }
+  
+  Body {
+      Background-color: rosybrown;
+      }
+      
+  img {
+      float: right;
+      width: 370px;
+      height: 600px;
+      }
+      
+  ul.a {
+        list-style-type: circle;
+        color: floralwhite;
+        Font-size: 20px;
+      } 
+  
+  .div1 {
+          width: 400px;
+          height: 100px;
+          border: 2px solid floralwhite;
+          box-sizing: border-box;
+        }
+  
 
-#greeting-container {
-  margin-top: 20px;
-}
