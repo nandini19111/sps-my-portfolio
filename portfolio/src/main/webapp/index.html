@@ -1,75 +1,187 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div>
-    <h1>Nandini's Portfolio</h1>
-    <h2>Name: Nandini Sharma</h2>
-    <h2>Year: Rising Sophomore</h2>
-    <h2>School: UC Berkeley</h2>
-    <h2>Major: Intended Computer Science</h2>
-    <h2>Some of my hobbies include:</h2>
-    <ul class="a">
-        <li><b>Singing</b></li>
-        <li><b>Hanging out with my friends</b></li>
-        <li><b>Muical Theater</b></li>
-      </ul>
-
-    <p> I was born in India and have lived in 5 different countries since. I consider travelling and exploring the world one of my greatest passions. Some things I really enjoy is iced coffee, especially on hot days. I also love performing, I did musical theater while growing up and love how dramatic musicals can be. I started coding rceently and it has easily become one 
-          of my favourite activities due to how gratifying creating a project can be, it also allows me to be creative in a whole new sense. </p>
-
-    <h2>A list of projects I have worked on:</h2>
-    <ul class="a">
-        <li><b>Tip Calculator</b></li>
-        <li><b>GPA Calculator</b></li>
-        <li><b>MyDailyPlan - A daily tasks web app where users can add their tasks for the day and the time allocated for each task</b></li>
-        <li><b>Scheme Language Interpreter</b></li>
-        <li><b>Ants vs Some Bees - A game inspired by 'Plants vs Zombies'</b></li>
-        <li><b>MyAlbums - A web app that you can use to track songs you like from different albums and artists</b></li>
-    </ul>
-
-    <h2>My LinkedIn: <a href="https://www.linkedin.com/in/nandini-sharma-5429a0214/">Nandini Sharma</a></h2>
-    <h2>My GitHub: <a href="https://github.com/nandini19111">Nandini19111</a></h2>
-
-    <img src="/images/statue.jpg" style="float:left;width:500px;height:300px;">
-    <img src="/images/Penang.jpg" style="float:left;width:420px;height:300px;" >
-    <img src="/images/KL.jpg" style="float:left;width:500px;height:300px;" >
-
-    <p>I am not a huge fan of photography as I usually forget to take pictures and I love living in the moment. However, at the same time I really enjoy looking back at pictures and reliving through them.</p>
-    <p>One of my best friends is a photographer and I always relied on her to take the best pictures, but since we have moved away from each other, now it is my responsibility to take good pictures. Therefore, I recently bought a film camera and have really been enjoying the process of taking pictures on it.</p>
-    <p>I think the best thing to photograph is a person's candid profile, like when someone is laughing or looking away because they capture the moment so perfectly and they are also my favourite type of pictures to look back at. 
-        I also really enjoy taking pictures of the scenery of wherever I am so that I can always remember the beauty that every unique place in this world holds.</p>
-    
-    <h2>My Hidden Talent: Rollerblading</h2>
-    <a href="https://www.rollerskatedad.com/blog/">RollerSkateDad</a>
-    <a href="https://bigwheelblading.com/blog/">BigWheelBlading</a>
-    <a href="https://www.rollergirlgang.co.uk/blog-1">RollerGirlGang</a>
-
-    <form action="/submission" method="POST">
-        <h2>Hello! Please enter your Email and the purpose of your visit:</h2>
-        <textarea class ="div1" name="text-input">Your Email and Purpose</textarea>
-        <br/>
-        <input type="submit" />
-    </form>     
-    
-    <h2>Translation Box!</h2>
-    <h3>Please type anything you'd like to see translated into my mother tongue, Hindi!</h3>
-
-    <textarea id="text"></textarea>
-
-    <button onclick="showTranslation();">Translate!</button>
-
-    <hr/>
-    <h3 id="final-text"></h3>
-
-
-    </div>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>My Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Nandini Sharma</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/images/nandini.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">My Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#photos">My Photography</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">My Hidden Talent</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#cform">Contact Me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tbox">Translate</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Nandini
+                        <span class="text-primary">Sharma</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        UC Berkeley · Rising Sophomore · Computer Science ·
+                        <a href="nandini.sharma@berkeley.edu">nandini.sharma@berkeley.edu</a>
+                    </div>
+                    <p class="lead mb-5">I was born in India and have lived in 5 different countries since. I consider travelling and exploring the world one of my greatest passions. Some things I really enjoy is iced coffee, especially on hot days. I also love performing, I did musical theater while growing up and love how dramatic musicals can be. I started coding recently and it has easily become one of my favourite activities due to how gratifying creating a project can be, it also allows me to be creative in a whole new sense.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/nandini-sharma-5429a0214/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/nandini19111"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Tip Calculator</h3>
+                            <div class="subheading mb-3">React.js</div>
+                            <p>Built an online tip calculator which allows users to calculate tip amount. <br>
+                            Added functionality to add dishes by user and calculate individual tip amount rather than splitting the tip evenly.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">GPA Calculator</h3>
+                            <div class="subheading mb-3">React.js</div>
+                            <p>Built an online GPA calculator web app that calculates GPA based on current academic progress. <br>
+                            Added feature to show future grades necessary to achieve desired GPA.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">MyDailyPlan</h3>
+                            <div class="subheading mb-3">React.js, PHP and MySQL</div>
+                            <p>A daily tasks web app where users can add their tasks for the day and the time allocated for each task.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Scheme Language Interpreter</h3>
+                            <div class="subheading mb-3">Python</div>
+                            <p>Built an interpreter for Scheme in Python, making it possible to run all scheme operations in the interpreter.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Ants vs Some Bees</h3>
+                            <div class="subheading mb-3">Python</div>
+                            <p>A game inspired by 'Plants vs Zombies'.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">MyAlbums</h3>
+                            <div class="subheading mb-3">PHP, MySQL</div>
+                            <p>A web app that you can use to track songs you like from different albums and artists.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Photos-->
+            <section class="resume-section" id="photos">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Photos I've taken</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <img src="/images/statue.jpg" style="float:left;width:360px;height:250px;">
+                            <img src="/images/Penang.jpg" style="float:left;width:350px;height:250px;" >
+                            <img src="/images/KL.jpg" style="float:left;width:360px;height:250px;" >
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <div class="subheading mb-3">I  am not a huge fan of photography as I usually forget to take pictures and I love living in the moment. However, at the same time I really enjoy looking back at pictures and reliving through them.</div>
+                            <div class="subheading mb-3">One of my best friends is a photographer and I always relied on her to take the best pictures, but since we have moved away from each other, now it is my responsibility to take good pictures. Therefore, I recently bought a film camera and have really been enjoying the process of taking pictures on it.</div>
+                            <div class="subheading mb-3">I think the best thing to photograph is a person's candid profile, like when someone is laughing or looking away because they capture the moment so perfectly and they are also my favourite type of pictures to look back at. I also really enjoy taking pictures of the scenery of wherever I am so that I can always remember the beauty that every unique place in this world holds.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Rollerblading</h2>
+                    <div class="subheading mb-3">I started rollerblading when I was 7 years old, I even used to rollerblade to school!</div>
+                    </ul>
+                    <div class="subheading mb-3">Some blogs about the crazy world of rollerblading:</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                           <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <a href="https://www.rollerskatedad.com/blog/">RollerSkateDad</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <a href="https://bigwheelblading.com/blog/">BigWheelBlading</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            <a href="https://www.rollergirlgang.co.uk/blog-1">RollerGirlGang</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Contact Form-->
+            <section class="resume-section" id="cform">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Contact Me</h2>
+                        <form action="/submission" method="POST">
+                            <p>Hello! Please enter your Email and the purpose of your visit:</p>
+                            <textarea class ="box" name="text-input">Your Email and Purpose</textarea>
+                            <br/>
+                            <input class="submit-button" type="submit" />
+                        </form>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Translation Box!-->
+            <section class="resume-section" id="tbox">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Translation Box!</h2>
+                    <h4>Please type anything you'd like to see translated into my mother tongue, Hindi!</h4>
+                    <textarea class="box1" id="text"></textarea>
+                    <button class="btn-primary" onclick="showTranslation();">Translate!</button>
+                    <hr/>
+                    <h3 id="final-text"></h3>   
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="script.js"></script>
+    </body>
 </html>
 
 
