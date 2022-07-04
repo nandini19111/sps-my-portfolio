@@ -26,25 +26,52 @@
   //const greetingContainer = document.getElementById('greeting-container');
   //greetingContainer.innerText = greeting;}
 
-    function showTranslation() {
-        const text = document.getElementById('text').value;
+window.addEventListener('DOMContentLoaded', event => {
 
-        const resultContainer = document.getElementById('final-text');
-        resultContainer.innerText = 'Loading...';
+    // Activate Bootstrap scrollspy on the main nav element
+    const sideNav = document.body.querySelector('#sideNav');
+    if (sideNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#sideNav',
+            offset: 74,
+        });
+    };
 
-        const params = new URLSearchParams();
-        params.append('text', text);
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+    );
+    responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
 
-        fetch('/translatingbox', {
-            method: 'POST',
-            body: params
-          }).then(response => response.text())
-          .then((translatedMessage) => {
-            resultContainer.innerText = translatedMessage;
-          });
-        }
+});
+
+function showTranslation() {
+    const text = document.getElementById('text').value;
+
+    const resultContainer = document.getElementById('final-text');
+    resultContainer.innerText = 'Loading...';
+
+    const params = new URLSearchParams();
+    params.append('text', text);
+
+    fetch('/translatingbox', {
+        method: 'POST',
+        body: params
+        }).then(response => response.text())
+        .then((translatedMessage) => {
+        resultContainer.innerText = translatedMessage;
+        });
+    }
     
   
 
+  
   
   
